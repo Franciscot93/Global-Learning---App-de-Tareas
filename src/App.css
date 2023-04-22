@@ -15,7 +15,8 @@
 .altura{
   height: 100%;
   color: #fff;
-  text-align: center
+  text-align: center;
+  background-color: #282c34;
 }
 
 .App-header {
