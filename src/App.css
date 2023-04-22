@@ -12,6 +12,11 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.altura{
+  height: 100%;
+  color: #fff;
+  text-align: center
+}
 
 .App-header {
   background-color: #282c34;
