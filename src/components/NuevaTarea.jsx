@@ -4,13 +4,13 @@ import InputGroup from "react-bootstrap/InputGroup";
 
 function NuevaTarea(props) {
   const [nuevaTareaNombre, setNuevaTareaNombre] = useState('');
-  console.log(props)
+  
   
 
   const handleSubmit = (e) => {
     e.preventDefault();
     props.sumarTarea(nuevaTareaNombre)
-    localStorage.setItem("tarea", nuevaTareaNombre);
+    
     setNuevaTareaNombre("");
   };
 
@@ -28,7 +28,7 @@ function NuevaTarea(props) {
         ></input>
         <button
           onClick={() => {
-            alert(nuevaTareaNombre);
+           
           }}
         >
           Guardar Tarea
