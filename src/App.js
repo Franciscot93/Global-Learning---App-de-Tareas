@@ -15,17 +15,22 @@ import CheckBox from "./components/CheckBox";
 function App() {
   const [itemsTarea, setItemsTarea] = useState([]);
 
-  const [idTarea, setIdTarea] = useState(0);
+  const [idTarea, setIdTarea] = useState('');
   
   const sumarTarea = (nuevaTareaNombre) => {
+
+    
     if (!itemsTarea.find((tarea) => tarea.nombre === nuevaTareaNombre)) {
       setIdTarea(idTarea + 1);
       setItemsTarea([
         ...itemsTarea,
-        { nombre: nuevaTareaNombre, realizada: false, id:nuevaTareaNombre+ idTarea },
+        { nombre: nuevaTareaNombre, realizada: false, id:nuevaTareaNombre+idTarea },
       ]);
+      
     }
   };
+
+
   const verificacionCheckBox = (tarea) => {
     setItemsTarea(
       itemsTarea.map((t) =>
@@ -65,8 +70,8 @@ function App() {
         <Col>
           <Row>
             <div>
-              <NuevaTarea sumarTarea={sumarTarea} />
-              <ListaTareas borrandoTarea={borrandoTarea} verificacionCheckBox={verificacionCheckBox} itemsTarea={itemsTarea} />
+              <NuevaTarea sumarTarea={sumarTarea}  />
+              <ListaTareas setIdTarea={setIdTarea} sumarTarea={sumarTarea} setItemsTarea={setItemsTarea} borrandoTarea={borrandoTarea} verificacionCheckBox={verificacionCheckBox} itemsTarea={itemsTarea} />
               
             </div>
           </Row>

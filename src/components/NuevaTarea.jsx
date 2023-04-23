@@ -2,22 +2,20 @@ import { useState } from "react";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 
-function NuevaTarea(props) {
-  const [nuevaTareaNombre, setNuevaTareaNombre] = useState('');
-  
-  
+function NuevaTarea({ sumarTarea}) {
+  const [nuevaTareaNombre, setNuevaTareaNombre] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.sumarTarea(nuevaTareaNombre)
-    
+    sumarTarea(nuevaTareaNombre);
+
     setNuevaTareaNombre("");
   };
 
-
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      
+      <form onSubmit={(e) => handleSubmit(e)}>
         <input
           value={nuevaTareaNombre}
           onChange={(e) => {
@@ -26,13 +24,7 @@ function NuevaTarea(props) {
           type="text"
           placeholder="Anota tu tarea"
         ></input>
-        <button
-          onClick={() => {
-           
-          }}
-        >
-          Guardar Tarea
-        </button>
+        <button onClick={(e) => {handleSubmit(e)}}>Guardar Tarea</button>
       </form>
     </>
   );
