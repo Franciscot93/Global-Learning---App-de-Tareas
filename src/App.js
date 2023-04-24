@@ -1,4 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle";
 import "./App.css";
 import Container from "react-bootstrap/Container";
 import { useState, useEffect } from "react";
@@ -63,10 +64,10 @@ function App() {
   
   return (
     <>
-      <div className="text-center">
-        <h1>Lista de Tareas</h1>
+      <div className="fondo text-center mt-5 mb-3 text-light">
+        <h1 className="fs-1 fondo">Lista de Tareas</h1>
       </div>
-      <Container className="bg-dark text-center text-light">
+      <Container className="bg-dark text-center fondo text-light">
         <Col>
           <Row>
             <div>

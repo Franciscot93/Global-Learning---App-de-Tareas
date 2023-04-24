@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Form from "react-bootstrap/Form";
-import InputGroup from "react-bootstrap/InputGroup";
+
+
 
 function NuevaTarea({ sumarTarea}) {
   const [nuevaTareaNombre, setNuevaTareaNombre] = useState("");
@@ -15,8 +15,8 @@ function NuevaTarea({ sumarTarea}) {
   return (
     <>
       
-      <form onSubmit={(e) => handleSubmit(e)}>
-        <input
+      <form className="form fondo mb-3" onSubmit={(e) => handleSubmit(e)}>
+        <input className="form-control fs-2 fondo"
           value={nuevaTareaNombre}
           onChange={(e) => {
             setNuevaTareaNombre(e.target.value);
@@ -24,7 +24,7 @@ function NuevaTarea({ sumarTarea}) {
           type="text"
           placeholder="Anota tu tarea"
         ></input>
-        <button onClick={(e) => {handleSubmit(e)}}>Guardar Tarea</button>
+        <button id="botonGuardado" className=" text-center mt-2 fs-3 btn rounded-pill ms-2" onClick={(e) => {handleSubmit(e)}}>Guardar Tarea</button>
       </form>
     </>
   );
