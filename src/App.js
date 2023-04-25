@@ -10,13 +10,14 @@ import Row from "react-bootstrap/Row";
 import ListaTareas from "./components/ListaTareas";
 import NuevaTarea from "./components/NuevaTarea";
 import CheckBox from "./components/CheckBox";
+import ModalEditar from "./components/ModalEditar";
 
 
 
 function App() {
   const [itemsTarea, setItemsTarea] = useState([]);
-
-  const [idTarea, setIdTarea] = useState('');
+  
+  const [idTarea, setIdTarea] = useState(1);
   
   const sumarTarea = (nuevaTareaNombre) => {
 
@@ -25,7 +26,7 @@ function App() {
       setIdTarea(idTarea + 1);
       setItemsTarea([
         ...itemsTarea,
-        { nombre: nuevaTareaNombre, realizada: false, id:nuevaTareaNombre+idTarea },
+        { nombre: nuevaTareaNombre, realizada: false, id:(nuevaTareaNombre+idTarea) },
       ]);
       
     }
@@ -64,15 +65,15 @@ function App() {
   
   return (
     <>
-      <div className="fondo text-center mt-5 mb-3 text-light">
-        <h1 className="fs-1 fondo">Lista de Tareas</h1>
+      <div className="fondo text-center  mt-5 mb-3 text-light">
+        <h1 className="fs-1 fondo ">Lista de Tareas</h1>
       </div>
       <Container className="bg-dark text-center fondo text-light">
         <Col>
           <Row>
             <div>
               <NuevaTarea sumarTarea={sumarTarea}  />
-              <ListaTareas setIdTarea={setIdTarea} sumarTarea={sumarTarea} setItemsTarea={setItemsTarea} borrandoTarea={borrandoTarea} verificacionCheckBox={verificacionCheckBox} itemsTarea={itemsTarea} />
+              <ListaTareas   setIdTarea={setIdTarea} sumarTarea={sumarTarea} setItemsTarea={setItemsTarea} borrandoTarea={borrandoTarea} verificacionCheckBox={verificacionCheckBox} itemsTarea={itemsTarea} />
               
             </div>
           </Row>

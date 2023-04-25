@@ -16,6 +16,7 @@ body {
 }
 #checkBox{
   background-color: #282c34;
+  border: 1px solid #fff;
   color: #fff;
 }
 #checkBox:hover{
@@ -29,6 +30,7 @@ body {
 }
 
 #botonGuardado:hover{
+  box-shadow: 1px 1px 8px #fff;
   background-color: #fff;
   border: 5px solid #282c34;
   color:#282c34;
@@ -45,4 +47,76 @@ justify-content: center;
 align-items: center;
 border:3px solid #fff;
 
+}
+
+#botonEditarId{
+  background-color: #282c34;
+  color: #fff;
+  border: 2px solid #fff;
+  margin: 3px;
+}
+
+#botonEditarId:hover{
+  
+  box-shadow: 1px 1px 8px #fff;  
+  border: 2px solid #0ef706;
+  margin: 3px;
+  color: #0ef706;
+}
+
+#botonBorrarId{
+  background-color: #282c34;
+  color: #fff;
+  border: 2px solid #fff;
+  margin: 3px;
+}
+
+#botonBorrarId:hover{
+  
+  box-shadow: 1px 1px 8px #fff;  
+  border: 2px solid #fd0202;
+  margin: 3px;
+  color:#fd0202
+}
+
+
+#modalEditar{
+justify-content: center;
+align-items: center;
+border:3px solid #fff;
+border-radius: 10px;
+}
+
+#botonGuardarModal{
+  background-color: #282c34;
+  color: #fff;
+  border: 2px solid #fff;
+  margin: 3px;
+}
+
+#botonGuardarModal:hover{
+  box-shadow: 1px 1px 8px #fff;  
+  border: 2px solid #0284fd;
+  margin: 3px;
+  color: #0284fd;
+  text-shadow:1px 1px 8px #fff ;
+}
+
+#botonCerrarModal{
+  background-color: #282c34;
+  color: #fff;
+  border: 2px solid #fff;
+  margin: 3px;
+}
+
+#botonCerrarModal:hover{
+  box-shadow: 1px 1px 8px #fff;  
+  border: 2px solid #fd0202;
+  margin: 3px;
+  color: #fd0202;
+  text-shadow:1px 1px 8px #fff ;
+}
+
+#inputModal{
+  color: #282c34;
 }
